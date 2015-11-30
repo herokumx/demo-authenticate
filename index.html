@@ -58,6 +58,7 @@
 
     var connection = config.connection;
     var prompt = config.prompt;
+    var callbackURL = 'https://demo-authenticate.herokuapp.com/home.html';
 
     var initializationOptions = {
       assetsUrl:  config.assetsUrl,
@@ -68,7 +69,7 @@
     lock.show({
       //icon:            blob:https%3A//drive.google.com/3adb0ac1-2b5a-4404-a73e-78afab1faa48,
 
-      callbackURL:        config.callbackURL,
+      callbackURL:        'https://demo-authenticate.herokuapp.com/home.html',
       responseType:       config.callbackOnLocationHash ? 'token' : 'code',
       dict:               config.dict,
       connections:        connection ? [connection] : null,
