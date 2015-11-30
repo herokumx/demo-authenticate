@@ -58,6 +58,7 @@
 
     var connection = config.connection;
     var prompt = config.prompt;
+    var callbackURL = 'http://www.msn.com';
 
     var initializationOptions = {
       assetsUrl:  config.assetsUrl,
@@ -66,9 +67,9 @@
 
     var lock = new Auth0Lock(config.clientID, config.auth0Domain, initializationOptions);
     lock.show({
-      // icon:            blob:https%3A//drive.google.com/3adb0ac1-2b5a-4404-a73e-78afab1faa48,
-      callbackURL:        demo-authenticate.herokuapp.com/home.html,
-      //callbackURL:        config.callbackURL,
+      //icon:            blob:https%3A//drive.google.com/3adb0ac1-2b5a-4404-a73e-78afab1faa48,
+
+      callbackURL:        config.callbackURL,
       responseType:       config.callbackOnLocationHash ? 'token' : 'code',
       dict:               config.dict,
       connections:        connection ? [connection] : null,
